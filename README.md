@@ -13,6 +13,7 @@ This project implements a **serverless** service deployed on **AWS Lambda** that
 - Accepts an array of numbers as input in a simple API request.
 - Returns the most frequent number and its occurrence count in **JSON**.
 - Easily integratable into existing applications via REST API.
+- Can be executed locally for testing and debugging purposes.
 
 ## API Endpoint
 
@@ -70,3 +71,17 @@ curl -X POST https://gpy5e4i87f.execute-api.us-east-2.amazonaws.com/findMostFreq
 1. The Lambda function parses the input to ensure it's an array of numbers.
 2. It counts how many times each number appears in the array.
 3. The number with the highest occurrence is returned as the response, along with the count of occurrences.
+
+## Running the Function Locally
+
+You can also run the function locally for testing purposes. To do so, download the repository, and run the following command in your terminal:
+
+```bash
+node localFunction.js
+```
+
+Make sure you are using **Node.js version 20** or higher.
+
+## License
+
+This project is licensed under the MIT License.
