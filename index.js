@@ -14,7 +14,7 @@ exports.handler = async (event) => {
 
         const count = numbers.reduce((ky, num) => {
             ky[num] = (ky[num] || 0) + 1;
-            return acc;
+            return ky;
         }, {});
 
         const mostFrequent = Object.keys(count).reduce((a, b) => (count[b] > count[a] ? b : a));
